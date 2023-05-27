@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dc47bc31e3a90d144823194e19c6b205
+guid: 7ea1999ea1e747e4a9c5db4215b601b0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,28 +102,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Swing Monkeys V2_0
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 200
-        width: 900
-        height: 720
-      alignment: 9
-      pivot: {x: 0.105263114, y: 0.28679338}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54db65a5c4192c44dbeaccfee7aa5f7b
-      internalID: 524885178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -134,8 +113,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Swing Monkeys V2_0: 524885178
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

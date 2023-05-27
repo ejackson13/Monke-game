@@ -6,11 +6,7 @@ using UnityEngine;
 public class MainPlayer : MonoBehaviour
 {
     [SerializeField] float _moveSpeed = .5f;
-    //[SerializeField] float _maxSpeed = 10f;
     [SerializeField] float _jumpHeight = 10;
-    //[SerializeField] float _jumpPower = 5;
-    //float _currentTilt = 0;
-    bool _isJumping = false;
     float _distToGround;
 
 
@@ -27,6 +23,7 @@ public class MainPlayer : MonoBehaviour
         //Debug.DrawRay(transform.position, new Vector3(transform.position.x, transform.position.y - (_distToGround + .1f)), Color.black);
         Move();
     }
+
 
     void Move()
     {
@@ -63,7 +60,7 @@ public class MainPlayer : MonoBehaviour
 
     bool isGrounded()
     {
-        Debug.Log(transform.position.y - (_distToGround + .1f));
+        //Debug.Log(transform.position.y - (_distToGround + .1f));
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.down, _distToGround + .1f);
         return hit.collider != null;
     }
