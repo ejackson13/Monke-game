@@ -8,6 +8,7 @@ public class MainPlayer : MonoBehaviour
     [SerializeField] float _moveSpeed = .5f;
     [SerializeField] float _jumpHeight = 10;
     float _distToGround;
+    bool _facingRight = true;
 
 
     // Start is called before the first frame update
@@ -41,21 +42,21 @@ public class MainPlayer : MonoBehaviour
             velocity.y += _jumpHeight;
         }
 
+        if((_facingRight && velocity.x < 0) || (!_facingRight && velocity.x > 0)) {
+            Vector3 newScale = transform.localScale;
+            newScale.x *= -1;
+            transform.localScale = newScale;
+            _facingRight = !_facingRight;
+        }
+
+
         rigidbody.velocity = velocity;
 
-        /*
-        if (Math.Abs(rigidbody.velocity.x) > _maxSpeed)
-        {
-            if(rigidbody.velocity.x < 0)
-            {
-                rigidbody.velocity = new Vector2(-1 * _maxSpeed, rigidbody.velocity.y);
-            }
-            else
-            {
-                rigidbody.velocity = new Vector2(_maxSpeed, rigidbody.velocity.y);
-            }
-        } 
-        */
+        Animator animator = GetComponent<Animator>();
+        animator.SetFloat("Speed", Math.Abs(velocity.x));
+        animator.SetFloat("Y Velocity", velocity.y);
+        animator.SetBool("Grounded", isGrounded());
+        
     }
 
     bool isGrounded()
